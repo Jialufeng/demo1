@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	  <meta name="theme-color" content="#de698c">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	  <meta name="format-detection" content="telephone=no">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	  <title>弹幕</title>
+	  <style>
+		  /*.ABP-Unit{*/
+			  /*width: 100% !important;*/
+			  /*height: 500px !important;*/
+		  /*}*/
+		  /*.ABP-Text{*/
+			  /*display: none;*/
+		  /*}*/
+		  html.body {
+			  min-height: 100%;
+		  }
+		  body {
+			  /*overflow: hidden;*/
+		  }
+		  .ABP-Unit {
+			  width: 100% !important;
+			  height: 100% !important;
+		  }
+		  .ABP-Unit:after {
+			  /*padding-top: 62%;*/
+			  content: '';
+			  display: block;
+			  padding-top: 62.5%;
+		  }
+	  </style>
+
+   	<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/base.css" />
+	<script src="js/CommentCoreLibrary.min.js"></script>
+	<script src="js/ABPlayer.min.js"></script>
+	<script type="text/javascript">
+			var $_ = function(e){return document.getElementById(e);};
+			window.addEventListener("load",function(e){
+					if(e && e.preventDefault)
+						e.preventDefault();
+					var inst = ABP.create(document.getElementById("load-player"), {
+						"src":{
+							"playlist":[
+								{
+									"video":document.getElementById("video-2"),
+									"comments":"comment-science.xml"
+								}
+							]
+						},
+						"width":'100%',
+						"height":522
+					});
+			});
+	</script>
+	  <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+	  <script>
+
+		  //dom元素加载完事件
+		  $(document).ready(function(){
+			  asynconresize();
+		  });
+		  //页面改变大小事件
+		  window.onresize = function(){
+			  asynconresize();
+		  };
+		  //改变元素大小
+		  var asynconresize=function(){
+			  var width=$(window).width();//获取浏览器宽度；
+			  var height=$(window).height()//获取浏览器高度；
+
+//			  setTimeout(function() {
+//				  var loads = $('.load-player').height();
+//				  var tabs = $('.tabs').height();
+//				  var dial = $('.dialogue').height();
+//				  var chat = $('.chat').height();
+//				  console.log(loads);
+//
+//				  var heights = (loads + tabs + dial + chat);
+//				  $('.record').height(height - heights - 10);
+//			  },500)
+
+
+//			  $(".async_middle").height(height-104);
+//			  $(".async_middle_right").width(width-207).height(height-104)
+//			  $("#positions").width(width-207).height(height-104)
+		  }
+
+	  </script>
+  </head>
+  <body>
+    	<div class="wrapper">
+			<section>
+				<video id="video-2" preload="auto" webkit-playsinline="" load="loaded" style="display:inline-block" data-setup="{}" width="100%" height="450">
+					<source src="http://cn-tj4-cu.acgvideo.com/vg5/4/42/7666332-1.mp4?expires=1464258000&ssig=5CMMmuW3XP4TzKUSGUMUjg&oi=1032300884&internal=1&rate=0" type="video/mp4">
+				</video>
+				<div id="load-player" class="load-player"></div>
+			</section>
+		<section>
+			<section class="tabs">
+				<a href="javascript:" class="active"><span>聊天</span></a>
+				<a href="javascript:"><span>详情</span></a>
+			</section>
+			<section class="chat-whole">
+				<section>
+					<section class="chat">
+							<img src="http://cdn.alloyteam.com/wp-content/uploads/2015/10/TAT.yana_avatar_1444915245-43x43.jpg" class="heads"/>
+						<section class="chat-name">
+							<p>名称:name</p>
+							<p><span class="reds">666</span>粉丝,<span class="reds">2.2万</span>人气</p>
+						</section>
+						<section class="chat-follow">
+							<a href="javascript:" class="follow">+关注</a>
+							<span class="outlines"></span>
+							<span class="icon1"></span>
+						</section>
+					</section>
+					<section class="record">
+						<p class="reds">欢迎进入[666]</p>
+						<p class="reds">弹幕链接成功[666]</p>
+						<section class="record-s">
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈hjkhkjhkjhkjhkjhkjhkjhkkjhkjhkj</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+							<p><span>你妹:</span>哈哈</p>
+						</section>
+					</section>
+					<section style="position: fixed; bottom: 0; left: 0; width: 100%" >
+						<section class="dialogue">
+							<a href="javascript:;" class="looks"></a>
+							<section class="send-dm">
+								<input type="text" class="ipn-text" placeholder="快来发弹幕吐槽~"/>
+								<a href="javascript:;" class="send-out">发送</a>
+							</section>
+							<span class="gift"></span>
+						</section>
+					</section>
+				</section>
+				<section></section>
+			</section>
+		</section>
+		</div>
+  </body>
+</html>

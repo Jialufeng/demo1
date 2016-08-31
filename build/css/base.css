@@ -1,0 +1,437 @@
+.ABP-Unit{
+  position:relative;
+  color:#fff;
+  background:#000;
+  font-size:16px;
+  outline:none;
+}
+.ABP-Unit.ABP-FullScreen{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:auto !important;
+  height:auto !important;
+  position:fixed;
+  z-index:9999;
+}
+.ABP-Unit .ABP-Video{
+  position:absolute;
+  overflow:hidden;
+  top:0;left:0;right:0;bottom:0;
+  background:#000;
+}
+.ABP-Unit .ABP-Video video{
+  width:100%;
+  height:100%;
+}
+
+.ABP-Unit .ABP-Video .ABP-Container{
+  -webkit-transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+          transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  border: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ABP-Unit .ABP-Video .ABP-Container .cmt{
+  -webkit-transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+          transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
+  position: absolute;
+  padding: 3px 0 0 0;
+  margin: 0;
+  color: #fff;
+  font-family: SimHei, SimSun, Heiti, "MS Mincho", "Meiryo", "Microsoft YaHei", monospace;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+  line-height: 100%;
+  letter-spacing: 0;
+  word-break: keep-all;
+  white-space: pre;
+}
+.ABP-Unit .ABP-Video .ABP-Container .cmt.noshadow{
+  text-shadow: none;
+}
+.ABP-Unit .ABP-Video .ABP-Container .cmt.rshadow{
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.ABP-Unit .ABP-Text{
+  position:absolute;
+  bottom:40px;left:0;right:0;
+  height:30px;
+  padding:0;
+  border-top:1px solid #33b5e5;
+  background:#000;
+  opacity:0.9;
+  display: none;
+}
+.ABP-Unit .ABP-Text .colorsel{
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+}
+.ABP-Unit .ABP-Text input[type=text]{
+  background:transparent;
+  border:none;
+  margin:0;
+  position:absolute;
+  display:block;
+  top:0;left:0;right:0;bottom:0;
+  vertical-align: middle;
+  color:#33b5e5;
+  outline:none;
+  font-family: monospace;
+  height:1.875rem;
+  min-width:90%;
+  padding-left:10px;
+  padding-right:10px;
+  font-size:18px;
+}
+.ABP-Unit .ABP-Control{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  background:#000;
+  opacity:0.9;
+  border-top:1px solid #33b5e5;
+  height:1.875rem;
+  -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+      user-select: none;
+}
+.ABP-Unit .ABP-Control:hover{
+  opacity:1;
+}
+
+.ABP-Unit .ABP-Control .button{
+  position:absolute;
+  overflow:hidden;
+  background-color:#000;
+  width:40px;
+  top:0;bottom:0;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/*.ABP-Unit .ABP-Control .button:hover{*/
+  /*background-color:#6cf;*/
+/*}*/
+
+.ABP-Unit .ABP-Control .ABP-Play{
+  background-image:url(../images/play.png);
+  background-size:cover;
+  left:0;
+  background-position: 0;
+}
+
+.ABP-Unit .ABP-Control .ABP-Play.ABP-Pause{
+  background-image:url(../images/pause.png);
+}
+
+.ABP-Unit .ABP-Control .ABP-FullScreen{
+  background:url(../images/icon4.png) no-repeat;
+  background-size:73%;
+  width: 2rem;
+  top: 0.25rem;
+  right:0;
+}
+
+.ABP-Unit .ABP-Control .ABP-CommentShow{
+  background: transparent url(../images/icon3.png)  no-repeat;
+  background-size:68%;
+  top:0.25rem;
+  right:2rem;
+  bottom:0;
+  width: 3.125rem !important;
+}
+.commentHide {
+  background-image:url(../images/danmaku.png?);
+
+}
+.ABP-Unit .ABP-Control .progress-bar {
+  position:absolute;
+  overflow:hidden;
+  cursor:default;
+  top:0;right:80px;bottom:0;left:40px;
+  background:#000;
+}
+
+.ABP-Unit .ABP-Control .progress-bar .bar{
+  position:absolute;
+  left:0;top:0;bottom:0;
+  background:#4399ee;
+  opacity:0.4;
+}
+
+.ABP-Unit .ABP-Control .progress-bar .bar.dark{
+  background:#0099cc;
+  opacity:1;
+}
+
+.ABP-Unit .ABP-Popup{
+  position:absolute;
+  background:#000;
+  border:1px solid #33b5e5;
+  left:10px;
+  padding:5px;
+  bottom:82px;
+  opacity:0.8;
+  display: none !important;
+}
+
+/** Aliases for Chinese named fonts because they don't work on *nix **/
+@font-face{
+  font-family: "\9ED1\4F53";
+  src:local('SimHei');
+}
+
+@font-face{
+  font-family: "\5B8B\4F53";
+  src:local('SimSun');
+}
+
+@font-face{
+  font-family: "\534E\6587\6977\4F53";
+  src:local('SimKai');
+}
+
+@font-face{
+  font-family: "\5E7C\5706";
+  src:local('YouYuan');
+}
+
+@font-face{
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  src:local('Microsoft YaHei');
+}
+
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 384px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 385px) and (max-width: 413px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 480px) {
+  html {
+    font-size: 20.7px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 540px) {
+  html {
+    font-size: 27px;
+  }
+}
+.tabs {
+  height: 2.4rem;
+  line-height: 2.4rem;
+  /*overflow: hidden;*/
+}
+.tabs:after {
+  clear: both;
+  display: block;
+  content: '';
+  height:0;
+}
+.tabs a {
+  color: #b4b4b6;
+  width: 50%;
+  float: left;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+}
+.tabs a span {
+  display: inline-block;
+  width: 76%;
+
+}
+.tabs a.active span{
+  color: #e72021;
+  border-bottom: 2px #e72021 solid;
+}
+.chat {
+  background: #fff;
+  padding: 1rem 0.875rem;
+  overflow: hidden;
+}
+.heads {
+  float: left;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.chat-name {
+  float: left;
+}
+.chat-name p {
+  color: #5d5d5d;
+  font-size: 0.875rem;
+  margin-top: 0.2rem;
+  margin-left: 0.5rem;
+}
+.chat-whole {
+  margin-top: 2px;
+}
+.reds {
+  color: #e72021;
+}
+.chat-follow {
+  float: right;
+  margin-top: 0.5rem;
+}
+.follow {
+  width: 4.6rem;
+  height: 1.8rem;
+  background: #e73031;
+  color: #fff;
+  /*border-radius: 40%;*/
+  border-radius:20px 20px 20px 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 0.875rem;
+  /*float: left;*/
+  vertical-align: middle;
+
+}
+
+.icon1 {
+  width: 1.5625rem;
+  height: 1.62rem;
+  background: url(../images/icon1.png) no-repeat;
+  display: inline-block;
+  /*float: left;*/
+  vertical-align: middle;
+}
+.outlines {
+  width: 1px;
+  height: 2.4rem;
+  background: #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.2rem;
+
+  /*float: left;*/
+}
+.record {
+  padding: 0.2rem;
+  overflow: auto;
+}
+.record p{
+  font-size: 0.75rem;
+}
+.record-s p span{
+  color: #6a8fc7;
+}
+.record-s p {
+  color: #676767;
+}
+.dialogue {
+  width: 100%;
+  height: 2.2rem;
+  background: #eaeaeb;
+  border-top: 1px #dedede solid;
+  padding: 0.4rem 0;
+  position: relative;
+}
+.looks {
+  width: 2.2rem;
+  height: 2.2rem;
+  background: url(../images/icon8.png) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.ipn-text {
+  width: 11.8rem;
+  height: 2rem;
+  margin: 0 auto;
+  border: 1px #dbdbdb solid;
+  border-radius: 5px 5px 5px 5px;
+  text-indent: 1em;
+  color: #333333;
+  outline: 0;
+  padding-right: 2.2rem;
+
+}
+.send-out {
+  width: 2.4rem;
+  height: 1.8rem;
+  border: 1px #dbdbdb solid;
+  border-radius: 5px 5px 5px 5px;
+  outline: 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.8rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.15rem;
+  background: #e1e1e1;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.send-dm {
+  position: relative;
+  /*display: inline-block;*/
+  width: 14rem;
+  margin: 0 auto;
+}
+.gift {
+  width: 2rem;
+  height: 2rem;
+  background: url(../images/icon2.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: 100%;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+}
+
+
